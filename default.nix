@@ -7,14 +7,15 @@
 }:
 
 with import nixpkgs {};
-stdenv.mkDerivation {
+gcc49Stdenv.mkDerivation {
   name = "llvm-2.9";
 
-  src = builtins.fetchTarball {
-    name = "llvm-2.9";
-    url = https://releases.llvm.org/2.9/llvm-2.9.tgz;
-    sha256 = "1wrsbcnbpzcmids2pn19z6nw7384y3k0ivp9qdx0mlb312hn0gcm";
-  };
+  src = ./src;
+  # src = builtins.fetchTarball {
+  #   name = "llvm-2.9";
+  #   url = https://releases.llvm.org/2.9/llvm-2.9.tgz;
+  #   sha256 = "1wrsbcnbpzcmids2pn19z6nw7384y3k0ivp9qdx0mlb312hn0gcm";
+  # };
 
   buildInputs = [
     perl
