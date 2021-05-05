@@ -19,6 +19,7 @@ gcc49Stdenv.mkDerivation {
 
   buildInputs = [
     perl
+    groff
     # Would be better to use gcc 4.5, see https://gcc.gnu.org/releases.html
     gcc48
   ];
