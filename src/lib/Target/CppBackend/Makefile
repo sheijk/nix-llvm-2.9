@@ -13,4 +13,4 @@ DIRS = TargetInfo
 
 include $(LEVEL)/Makefile.common
 
-CompileCommonOpts += -Wno-format
+CompileCommonOpts += -Wno-format -Wno-format-security
