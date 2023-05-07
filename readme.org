@@ -1,0 +1,8 @@
+An attempt to build LLVM 2.9 on a modern system
+
+* How to build
+
+#+begin_src sh
+nix build .#packages.x86_64-linux.default
+#+end_src
+
