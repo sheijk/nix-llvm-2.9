@@ -1,13 +1,13 @@
 {
   nixpkgs ? (builtins.fetchGit {
-    name = "nixos-stable-20.09";
+    name = "nixos-stable-22.11";
     url = "https://github.com/nixos/nixpkgs";
-    ref = "refs/tags/20.09";
+    ref = "refs/tags/22.11";
   })
 }:
 
 with import nixpkgs {};
-gcc49Stdenv.mkDerivation {
+stdenvNoCC.mkDerivation {
   name = "llvm-2.9";
 
   src = ./src;
